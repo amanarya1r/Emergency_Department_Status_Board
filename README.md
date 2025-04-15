@@ -3,7 +3,9 @@ Emergency Department Status Board in short EDSB → EB is a excel dashboard for 
 
 *The purpose EDSB:* is to create a Hospital emergency room analysis dashboard in excel to imporve efficiency and provide useful insights. The dashboard will help stakeholders to monitor, analyze and make better decisions for managing patients and improving services.
 
+
 ## How Status Board Works:
+![Status_Board_Working](/img/working.gif)
 
 
 ## Project Steps
@@ -19,11 +21,13 @@ Emergency Department Status Board in short EDSB → EB is a excel dashboard for 
 * Dashboard / Report Devlopment
 * Insight Generation
 
+
 ## Requirement of EDSB:
 * **Number of Patients:** Count of total number of patients visiting the ER each day. Showing a daily trend with an area or column chart to spot patterns like busy days or seasonal trends.
 * **Average Wait Time:** Finding the average time patients wait to see a medical professional. Using an area or column chart to track daily changes and highlighting days with longer wait times that might need improvements.
 * **Patient Satisfaction Score:** Checking the average daily satisfaction score of patients to assess service quality
-  
+
+
 ## Charts to Create:
 * **Patient Admission Status:** Showing how many patients were admitted vs. not admitted.
 * **Patient Age Distribution:** Grouping patients by age(difference of 10 years).
@@ -33,7 +37,7 @@ Emergency Department Status Board in short EDSB → EB is a excel dashboard for 
 
   > **Here is the data set:** [EDSB_data.csv](data_set/EDSB_data.csv)
 
----
+
 ## Formula Used:
 1. **For sorting dates:** ```= List.Dates(#date(2023,01,01),731,#duration(1,0,0,0))```
 	> * ```#date(2023,01,01)``` → is a start date
@@ -63,7 +67,8 @@ Emergency Department Status Board in short EDSB → EB is a excel dashboard for 
    > * The formula fetches data from that specific cell in  another sheet.
    > * Same process done for other charts.
 
----
+
+## Data Relationship:
 ![connection.png](/img/connection.png)
 > * Since the Date inside the Calendar_Table is unique that's why indicated as '1'.
 > * But there multiple common Date inside the EDSB_data that's why indicated as '*'.
